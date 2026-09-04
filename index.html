@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education XYZ BD | Study Abroad &amp; IELTS Consultancy</title>
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Global Logo Fade-In Loading Screen -->
+  <div id="global-page-loader" class="page-loader-overlay hidden" aria-live="polite" role="status">
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <div class="loader-pulse-ring"></div>
+        <img src="assets/logo.jpg" alt="Education XYZ BD" class="loader-logo-img">
+      </div>
+      <div class="loader-text-wrap">
+        <h3 class="loader-brand-title">Education XYZ BD</h3>
+        <p class="loader-status-text" id="loader-status-text">Loading...</p>
+      </div>
+      <div class="loader-progress-bar">
+        <div class="loader-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Public / Login Screen -->
+  <div id="login-screen" class="login-wrap">
+    <div class="login-brand">
+      <div class="brand-top">
+        <div class="brand-badge-pill">
+          <span class="pulse-dot"></span> Education XYZ BD
+        </div>
+        <div class="logo-display-hero">
+          <img src="assets/logo-transparent.png" alt="Education XYZ Logo" class="brand-logo-img">
+        </div>
+        <h1 class="brand-hero-title">Education XYZ BD</h1>
+        <p class="brand-hero-tagline">Study Abroad &amp; IELTS Consultancy</p>
+      </div>
+
+      <div class="brand-footer-contact">
+        <div><strong>Head Office:</strong> 3rd floor, Ka-5/C, Jagannatpur, Bashundhara R/A Main Road, Vatara, Dhaka</div>
+        <div class="contact-links">
+          <span>📞 01781-827022</span> · <span>✉️ info@eduxyzbd.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="login-panel">
+      <div class="panel-inner">
+        <div class="auth-header-brand">
+          <img src="assets/logo.jpg" alt="Education XYZ Logo" class="auth-brand-logo">
+          <h2>Education XYZ BD</h2>
+          <p class="muted">Official Portal</p>
+        </div>
+
+        <div class="auth-tabs">
+          <button type="button" class="auth-tab active" id="tab-signin">Sign In</button>
+          <button type="button" class="auth-tab" id="tab-register">Student Registration</button>
+        </div>
+
+        <div id="login-error" class="error-banner" hidden></div>
+        <div id="login-success" class="success-banner" hidden></div>
+
+        <!-- Sign In Form -->
+        <form id="login-form" class="auth-form">
+          <div class="field">
+            <label for="email">Email Address or Staff / Student ID</label>
+             <input id="email" name="email" type="text" placeholder="e.g. admin1@eduxyzbd.com, rafiqul@eduxyzbd.com or XYZ-ADM-001" autocomplete="username" required>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="password-input-wrapper">
+              <input id="password" name="password" type="password" placeholder="••••••••" autocomplete="current-password" required>
+              <button type="button" class="btn-toggle-password" data-target="password" aria-label="Show password" title="Show password">
+                <svg class="eye-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <svg class="eye-off-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
+              </button>
+            </div>
+          </div>
+          <div class="form-actions-row">
+            <label class="check-label">
+              <input type="checkbox" name="remember" checked> Keep me signed in
+            </label>
+            <a href="javascript:void(0)" id="btn-forgot-pw" class="forgot-link">Forgot password?</a>
+          </div>
+          <button class="btn btn-primary btn-block btn-lg" type="submit">
+            Sign In →
+          </button>
+
+          <div class="auth-footer-help">
+            <p>Need support? Contact IT Helpdesk at <a href="mailto:support@eduxyzbd.com">support@eduxyzbd.com</a></p>
+          </div>
+        </form>
+
+        <!-- Public Student Registration / Inquiry Form -->
+        <form id="register-form" class="auth-form" hidden>
+          <div class="form-header">
+            <h3>New Student Registration</h3>
+            <p>Register for counseling &amp; get your Student ID</p>
+          </div>
+          <div class="field">
+            <label for="reg-name">Full Name</label>
+            <input id="reg-name" name="name" type="text" placeholder="e.g. MD. Tanvir Hasan" required>
+          </div>
+          <div class="grid-2-form">
+            <div class="field">
+              <label for="reg-email">Email Address</label>
+              <input id="reg-email" name="email" type="email" placeholder="name@email.com" required>
+            </div>
+            <div class="field">
+              <label for="reg-phone">Phone Number (Bangladesh)</label>
+              <input id="reg-phone" name="phone" type="tel" placeholder="+880 1700 000000" required>
+            </div>
+          </div>
+          <div class="grid-2-form">
+            <div class="field">
+              <label for="reg-interest">Interest / Goal</label>
+              <select id="reg-interest" name="interestType">
+                <option value="both">Both (Study Abroad &amp; IELTS)</option>
+                <option value="study-abroad">Study Abroad Only</option>
+                <option value="IELTS">IELTS Preparation Only</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="reg-country">Target Destination</label>
+              <select id="reg-country" name="targetCountry">
+                <option value="United Kingdom">United Kingdom (UK)</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+                <option value="USA">United States (USA)</option>
+                <option value="Germany">Germany / Europe</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Undecided">Undecided / Need Counseling</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="reg-password">Create Account Password</label>
+            <div class="password-input-wrapper">
+              <input id="reg-password" name="password" type="password" placeholder="At least 6 characters" minlength="6" required>
+              <button type="button" class="btn-toggle-password" data-target="reg-password" aria-label="Show password" title="Show password">
+                <svg class="eye-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <svg class="eye-off-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
+              </button>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block btn-lg" type="submit">
+            Create Student Account &amp; Apply →
+          </button>
+          <p class="terms-note">By submitting, you agree to receive guidance &amp; updates from Education XYZ BD counseling team.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Screen -->
+  <div id="app-screen" class="app" hidden>
+    <aside class="sidebar" id="appSidebar">
+      <div class="brand-shell">
+        <div class="brand-logo-wrap">
+          <img src="assets/logo.jpg" alt="Education XYZ Logo" class="app-logo">
+        </div>
+        <div class="brand-titles">
+          <div class="org-name">Education XYZ BD</div>
+          <div class="org-sub">Study Abroad &amp; IELTS</div>
+        </div>
+        <button class="sidebar-close-btn" id="sidebarCloseBtn" type="button" aria-label="Hide sidebar" title="Hide sidebar">&times;</button>
+      </div>
+
+      <nav class="nav" id="nav"></nav>
+
+       <div class="who-card">
+         <div class="user-avatar-badge" id="who-avatar">U</div>
+         <div class="user-info-text">
+           <div class="name" id="who-name">User Name</div>
+           <div class="email-hint" id="who-email"></div>
+           <div class="role-badge" id="who-role">Role</div>
+         </div>
+         <button class="out-btn" id="logout" type="button" title="Sign Out">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+        </button>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-toggle-btn" id="menuBtn" type="button" aria-label="Hide sidebar" aria-expanded="true" title="Hide sidebar">
+            <span></span><span></span><span></span>
+          </button>
+          <div>
+            <h1 id="page-title">Dashboard</h1>
+            <div class="sub" id="page-sub">Welcome to Education XYZ BD portal</div>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <button type="button" class="topbar-announcement-btn" id="topbar-announcement-btn" title="Announcements &amp; Notices" aria-label="Announcements">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span class="topbar-bell-badge" style="display:none;">0</span>
+          </button>
+          <div class="date-badge" id="today-date-badge"></div>
+          <div class="brand-quick-badge">Education XYZ BD</div>
+        </div>
+      </header>
+      <div class="view" id="view"></div>
+    </div>
+
+    <button type="button" class="floating-message-bubble" id="floating-message-bubble" title="Open Messages &amp; Inbox" aria-label="Open Messages and Inbox">
+      <span class="floating-message-icon" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M8 9h8M8 13h5"></path></svg>
+      </span>
+      <span class="floating-message-label">Messages</span>
+      <span class="floating-msg-badge" style="display:none;">0</span>
+    </button>
+  </div>
+
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/views/dashboard.js"></script>
+  <script src="js/views/accounts.js"></script>
+  <script src="js/views/students.js"></script>
+  <script src="js/views/applications.js"></script>
+  <script src="js/views/documents.js"></script>
+  <script src="js/views/batches.js"></script>
+  <script src="js/views/attendance.js"></script>
+  <script src="js/views/scores.js"></script>
+  <script src="js/views/announcements.js"></script>
+  <script src="js/views/messages.js"></script>
+  <script src="js/views/student-portal.js"></script>
+  <script src="js/views/recruitment.js"></script>
+  <script src="js/views/leads.js"></script>
+  <script src="js/views/database.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
